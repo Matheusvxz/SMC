@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #include <errno.h>
 #include <wiringPi.h>
+#include <string.h>
+#include <stdlib.h>
 
 #define PIN_OUT_LED         19  // GPIO19
 #define PIN_INP_BTN         26  //GPIO26
@@ -31,7 +33,7 @@ int main(int argc, char const *argv[]) {
     wiringPiSetupGpio();
     configureIO();
 
-    if(wiringPiISR(PIN_INP_BTN1, INT_EDGE_FALLING, &btnInterrupt) < 0) {
+    if(wiringPiISR(PIN_INP_BTN, INT_EDGE_FALLING, &btnInterrupt) < 0) {
         fprintf(stderr, "Incapaz de configurar ISR: %s\n", strerror(errno));
         return 1;
     }
@@ -56,6 +58,6 @@ void loop(void) {
 
 void configureIO() {
     pinMode(PIN_OUT_LED, OUTPUT);
-    pinMode(PIN_INP_BTN1, INPUT);
-    pullUpDnControl(PIN_INP_BTN1, PUD_UP);
+    pinMode(PIN_INP_BTN, INPUT);
+    pullUpDnControl(PIN_INP_BTN, PUD_UP);
 }
