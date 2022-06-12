@@ -16,7 +16,7 @@
 
 // Variables
 
-volatile int counter = 0
+volatile int counter = 0;
 volatile unsigned long lastInterrupt = 0;
 
 void configureIO(void);
@@ -60,7 +60,7 @@ int main(int argc, char const *argv[]) {
     wiringPiSetupGpio();
     configureIO();
 
-    if(wiringPiISR(PIN_INP_BTN1, INT_EDGE_FALLING, &btnInterrupt) < 0) {
+    if(wiringPiISR(PIN_INP_BTN, INT_EDGE_FALLING, &btnInterrupt) < 0) {
         fprintf(stderr, "Incapaz de configurar ISR: %s\n", strerror(errno));
         return 1;
     }
