@@ -11,8 +11,8 @@ all: $(TARGET) clean
 $(TARGET): main.o
 	$(CMP) $(FLAGS) -o $@ $^ $(LDFLAGS)
 
-main.o : main.c
+main.o: main.c
 	$(CMP) $(FLAGS) -c -o $@ $<
 
-clean :
+clean:
 	@rm -rf *. o *. d *~
