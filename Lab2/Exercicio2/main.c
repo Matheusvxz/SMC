@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #include <errno.h>
 #include <wiringPi.h>
+#include <string.h>
+#include <stdlib.h>
 
 #define PIN_OUT_LED         19      // GPIO19
 #define PIN_INP_BTN1        26      // GPIO26
