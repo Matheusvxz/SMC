@@ -6,11 +6,11 @@
 #include <stdlib.h>
 
 #define PIN_OUT_LED         19  // GPIO19
-#define PIN_INP_BTN         26  //GPIO26
+#define PIN_INP_BTN         26  // GPIO26
 
-#define DEBOUNCE_INT        200 //200ms
-#define INTERVAL_ON         500 //500ms
-#define INTERVAL_OFF        500 //500ms
+#define DEBOUNCE_INT        200 // 200ms
+#define INTERVAL_ON         500 // 500ms
+#define INTERVAL_OFF        500 // 500ms
 
 // Variables
 
