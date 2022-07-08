@@ -17,6 +17,7 @@
 int main() {
     int lcd;
 
+    wiringPiSetupGpio();
     if(wiringPiSetup() == -1) {
         fprintf(stdout, "Unable to start WiringPi: %s\n", strerror(errno));
     }
