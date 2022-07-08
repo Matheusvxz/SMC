@@ -22,7 +22,7 @@ int main() {
     wiringPiSetupGpio();
 
 
-    if((serial_port = serialOpen("/dev/ttyAMAO", 9600)) < 0) {
+    if((serial_port = serialOpen("/dev/ttyAMA0", 9600)) < 0) {
         fprintf(stderr, "Unable to open serial device: %s\n", strerror(errno));
     }
 
