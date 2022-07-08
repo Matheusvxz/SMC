@@ -1,4 +1,4 @@
-const int OUTPUT_LED = 13;
+const int OUTPUT_LED = 8;
 int inBuffer;
 
 void setup () {
@@ -10,7 +10,7 @@ void setup () {
 void loop () {
     // put your main code here , to run repeatedly :
     if (Serial.available ()) {
-        inBuffer = Serial.read ();
+        inBuffer = Serial.read();
         
         if (inBuffer % 2 == 0) {
             digitalWrite(OUTPUT_LED , HIGH);

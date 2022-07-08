@@ -1,29 +1,24 @@
 #include <stdio.h>
 #include <string.h>
-#include <errno .h>
+#include <errno.h>
 
 #include <wiringPi.h>
 #include <wiringSerial.h>
 
-int main () {
+int main() {
     int serial_port;
-    char C;
+    char c;
 
-    if ((serial_port = serialOpen ("/ dev / ttyAMA0 ", 9600) ) < 0) {
-        fprintf(stderr , " Unable to open serial device : %s\n", strerror(errno));
-        return 1;
+    if((serial_port = serialOpen("/dev/ttyAMAO", 9600)) < 0) {
+        fprintf(stderr, "Unable to open serial device: %s\n", strerror(errno));
     }
 
-    if (wiringPiSetup () == -1) {
-        fprintf (stdout, " Unable to start WiringPi : %s", strerror(errno ));
-        return 1;
+    if(wiringPiSetup() == -1) {
+        fprintf(stdout, "Unable to start WiringPi: %s\n", strerror(errno));
     }
 
-    while (true) {
-        scanf("%c", &C);
-
-        serialPutchar ( serial_port , C );
-        delay (1000) ;
+    while(1) {
+        scanf("%c", &c);
+        serialPutchar(serial_port, c);
     }
-    return 0; 
 }
