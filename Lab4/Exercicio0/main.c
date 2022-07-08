@@ -15,12 +15,12 @@
 #define LCD_D7  26               //Data pin D7
 
 int main() {
-
+    int lcd;
     if(wiringPiSetup() == -1) {
         fprintf(stdout, "Unable to start WiringPi: %s\n", strerror(errno));
     }
 
-    int lcd = lcdInit(2, 16, 4, LCD_RS, LCD_E,LCD_D4, LCD_D5, LCD_D6, LCD_D7, 0, 0, 0 ,0);
+    lcd = lcdInit(2, 16, 4, LCD_RS, LCD_E,LCD_D4, LCD_D5, LCD_D6, LCD_D7, 0, 0, 0 ,0);
 
     lcdClear(lcd);
     lcdPosition(lcd,  0,0);
