@@ -1,6 +1,5 @@
 
 #define PIN_ANALOG A0
-#define BOUNCE 200
 
 volatile int prevValue = 0;
 int value = 0;

@@ -15,7 +15,7 @@
 #define LCD_D7  14               //Data pin D7
 
 int serial_port;
-int char c;
+char c;
 
 int main() {
 

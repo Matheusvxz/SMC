@@ -15,7 +15,7 @@
 #define LCD_D7  14               //Data pin D7
 
 int serial_port;
-int char c;
+char c[200];
 
 int main() {
 
@@ -38,7 +38,7 @@ int main() {
     lcdPosition(lcd,0,1);
     lcdPuts(lcd,"Valor:");
     lcdPosition(lcd,6,1);
-    lcdPutchar(lcd, '0');
+    lcdPuts(lcd, "0%");
 
     while(1) {
         
