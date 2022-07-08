@@ -6,8 +6,8 @@
 #include <wiringSerial.h>
 #include <lcd.h>
 
-#define LCD_RS  25               //Register select pin
-#define LCD_E   24               //Enable Pin
+#define LCD_RS  17               //Register select pin
+#define LCD_E   5               //Enable Pin
 
 #define LCD_D4  6               //Data pin D4
 #define LCD_D5  13               //Data pin D5
