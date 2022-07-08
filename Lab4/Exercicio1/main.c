@@ -43,9 +43,12 @@ int main() {
 
     while(1) {
         if(serialDataAvail(serial_port) > 0) {
+            printf("Tem alguma coisa na serial");
             c = serialGetchar(serial_port);
+            printf("%c", c);
             lcdPosition(lcd,9,1);
             lcdPutchar(lcd, c);
+            serialFlush(serial_port);
         }
     }
     return 0;
