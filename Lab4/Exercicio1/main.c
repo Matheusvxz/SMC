@@ -39,7 +39,7 @@ int main() {
     lcdPuts(lcd,"Counter:");
     lcdPosition(lcd,9,1);
     lcdPutchar(lcd, '0');
-    
+    printf("Tem alguma coisa na serial");
 
     while(1) {
         if(serialDataAvail(serial_port) > 0) {
