@@ -22,13 +22,13 @@ int main() {
 
     int lcd = lcdInit(2, 16, 4, LCD_RS, LCD_E,LCD_D4, LCD_D5, LCD_D6, LCD_D7, 0, 0, 0 ,0);
 
-    lcdClear(lcd);
-    lcdPosition(lcd,0,0);
     lcdPuts(lcd,"TESTANDO LCD");
-    lcdPosition(lcd,0,1);
-    lcdPuts(lcd,"dale dale dale");
-    lcdPosition(lcd,9,1);
-    lcdPutchar(lcd, '0');
+    // lcdClear(lcd);
+    // lcdPosition(lcd,  0,0);
+    // lcdPosition(lcd,0,1);
+    // lcdPuts(lcd,"dale dale dale");
+    // lcdPosition(lcd,9,1);
+    // lcdPutchar(lcd, '0');
     
     return 0;
 }
