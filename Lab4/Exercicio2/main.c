@@ -37,7 +37,7 @@ int main() {
     lcdPuts(lcd,"POTENCIOMETRO");
     lcdPosition(lcd,0,1);
     lcdPuts(lcd,"Valor:");
-    lcdPosition(lcd,6,1);
+    lcdPosition(lcd,7,1);
     lcdPuts(lcd, "0%");
 
     while(1) {
@@ -45,13 +45,15 @@ int main() {
         if(serialDataAvail(serial_port) > 0) {
             int lenght = serialDataAvail(serial_port);
 
-            for(int i = 0; i < lenght; i++) {
+			int i;
+            for(i = 0; i < lenght; i++) {
                 c[i] = serialGetchar(serial_port);
             }
-
+			
+			printf("%s/n", c);
             serialFlush(serial_port);
 
-            lcdPosition(lcd,6,1);
+            lcdPosition(lcd,7,1);
 
             lcdPuts(lcd, c);
         }

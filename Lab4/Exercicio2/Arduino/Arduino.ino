@@ -18,7 +18,7 @@ void loop() {
   if(abs(value - prevValue) > 50) {
     prevValue = value;
     int percent = map(value, 0, 1023, 0, 100);
-    sprintf(buf, "%d%", percent);
-    Serial.write(buf);
+    sprintf(buf, "%d%%", percent);
+    Serial.print(buf);
   }
 }

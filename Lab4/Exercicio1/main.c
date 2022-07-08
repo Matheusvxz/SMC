@@ -6,7 +6,7 @@
 #include <wiringSerial.h>
 #include <lcd.h>
 
-#define LCD_RS  26               //Register select pin
+#define LCD_RS  26              //Register select pin
 #define LCD_E   19              //Enable Pin
 
 #define LCD_D4  13               //Data pin D4
@@ -18,9 +18,8 @@ int serial_port;
 char c;
 
 int main() {
-
+	printf("Iniciando\n");
     wiringPiSetupGpio();
-
 
     if((serial_port = serialOpen("/dev/ttyAMA0", 9600)) < 0) {
         fprintf(stderr, "Unable to open serial device: %s\n", strerror(errno));
@@ -41,13 +40,14 @@ int main() {
     lcdPuts(lcd,"Counter:");
     lcdPosition(lcd,9,1);
     lcdPutchar(lcd, '0');
-    fprintf(stdout, "Antes do while");/
+	
+    printf("Antes do while\n");
 
     while(1) {
         if(serialDataAvail(serial_port) > 0) {
-            printf("Tem alguma coisa na serial");
+            printf("Tem alguma coisa na serial\n");
             c = serialGetchar(serial_port);
-            printf("%c", c);
+            printf("%c\n", c);
             lcdPosition(lcd,9,1);
             lcdPutchar(lcd, c);
             serialFlush(serial_port);

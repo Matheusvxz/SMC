@@ -34,7 +34,7 @@ void buttonPressed() {
     }
 
     show7Seg(counter);
-    Serial.print(counter);
+    Serial.print(counter, DEC);
     
   }
   lastInterruption = current;
