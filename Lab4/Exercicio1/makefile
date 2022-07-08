@@ -1,7 +1,7 @@
 TARGET=main
 TARGET_SOURCES=main.c
 FLAGS=-O2 -Wall -MMD
-LIBS=-lwiringPi
+LIBS=-lwiringPi -lwiringPiDev
 
 CMP = gcc
 LDFLAGS=$(LIBS)
