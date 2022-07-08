@@ -24,10 +24,12 @@ int main() {
 
     if((serial_port = serialOpen("/dev/ttyAMA0", 9600)) < 0) {
         fprintf(stderr, "Unable to open serial device: %s\n", strerror(errno));
+        return 1;
     }
 
     if(wiringPiSetup() == -1) {
         fprintf(stdout, "Unable to start WiringPi: %s\n", strerror(errno));
+        return 1;
     }
 
     int lcd = lcdInit(2, 16, 4, LCD_RS, LCD_E,LCD_D4, LCD_D5, LCD_D6, LCD_D7, 0, 0, 0 ,0);
@@ -39,7 +41,7 @@ int main() {
     lcdPuts(lcd,"Counter:");
     lcdPosition(lcd,9,1);
     lcdPutchar(lcd, '0');
-    printf("Tem alguma coisa na serial");
+    fprintf(stdout, "Antes do while");/
 
     while(1) {
         if(serialDataAvail(serial_port) > 0) {
