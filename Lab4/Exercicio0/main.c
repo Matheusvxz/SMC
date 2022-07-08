@@ -12,7 +12,7 @@
 #define LCD_D4  23               //Data pin D4
 #define LCD_D5  22               //Data pin D5
 #define LCD_D6  21               //Data pin D6
-#define LCD_D7  14               //Data pin D7
+#define LCD_D7  12               //Data pin D7
 
 int main() {
 

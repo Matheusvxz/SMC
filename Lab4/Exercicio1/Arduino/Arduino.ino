@@ -1,9 +1,9 @@
 
-#define PIN_BTN 10
+#define PIN_BTN 2
 #define BOUNCE 200
 
 volatile unsigned long lastInterruption = 0;
-const int pins[] = {2,3,4,5,6,7,8};
+const int pins[] = {3,4,5,6,7,8,9};
 int counter = -1;
 
 void setup() {
@@ -16,10 +16,12 @@ void setup() {
   }
   
   Serial.begin(9600);
+  delay(2000);
+  Serial.println("Sistema iniciado");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // put your main cod  e here, to run repeatedly:
 }
 
 void buttonPressed() {
@@ -32,7 +34,7 @@ void buttonPressed() {
     }
 
     show7Seg(counter);
-    Serial.write(counter);
+    Serial.print(counter);
     
   }
   lastInterruption = current;
