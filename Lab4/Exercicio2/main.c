@@ -6,13 +6,13 @@
 #include <wiringSerial.h>
 #include <lcd.h>
 
-#define LCD_RS  25               //Register select pin
-#define LCD_E   24               //Enable Pin
+#define LCD_RS  26               //Register select pin
+#define LCD_E   19              //Enable Pin
 
-#define LCD_D4  23               //Data pin D4
-#define LCD_D5  22               //Data pin D5
-#define LCD_D6  21               //Data pin D6
-#define LCD_D7  14               //Data pin D7
+#define LCD_D4  13               //Data pin D4
+#define LCD_D5  6               //Data pin D5
+#define LCD_D6  5               //Data pin D6
+#define LCD_D7  11               //Data pin D7
 
 int serial_port;
 char c[200];
