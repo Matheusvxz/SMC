@@ -1,4 +1,3 @@
-
 #include <LiquidCrystal_I2C.h>
 #include <Servo.h>
 
@@ -11,7 +10,7 @@ LiquidCrystal_I2C lcd(0x20,20,4);
 int incomingBytes = 0;
 int pos[2] = {0, 0};
 int eixo = 0;
-
+//int motor = 0;
 bool can_move = false;
 
 void move(int pos, int motor);
@@ -27,8 +26,8 @@ void setup()
   
   // Print a message to the LCD.
   lcd.backlight();
-  lcd.setCursor(1,0);
-  lcd.print("CONTROLE SERVO");
+  lcd.setCursor(0,0);
+  lcd.print("CONTROLE ANTENAS");
 }
 
 void loop()
@@ -88,6 +87,7 @@ void loop()
   }
     
   if (can_move == true) {
+    //Serial.println(motor);
     for (int i = 0; i < 3; i++) {
       move(pos[i], i);
       delay(2000);
@@ -99,6 +99,7 @@ void loop()
     lcd.print("Configurado com,");
     lcd.setCursor(1,1);
     lcd.print("Sucesso!");
+    //exit(0);
   }
   
 }
