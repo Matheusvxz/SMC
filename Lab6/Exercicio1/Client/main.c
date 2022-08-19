@@ -33,10 +33,10 @@ int main(int argc, char const *argv[])
 
     while(1) {
         printf("Digite a mensagem que deseja enviar\n");
-        scanf("%50[^\n]", msg);
-        // len = strlen(msg);
-        // msg[len] = '\0';
-        // len++;
+        scanf("%s", msg);
+        len = strlen(msg);
+        msg[len] = '\0';
+        len++;
 
         if(strcmp(msg, "quit") == 0) {
             break;
