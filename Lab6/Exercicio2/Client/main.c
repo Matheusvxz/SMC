@@ -3,8 +3,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <unistd.h>
-
-// #define PORT 4242
+#include <time.h>
 
 int main(int argc, char const *argv[])
 {
@@ -20,7 +19,6 @@ int main(int argc, char const *argv[])
     
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_port = htons(atoi(argv[2]));
-    // printf("%s", argv[2]);
 
     if(inet_pton(AF_INET, argv[1], &serv_addr.sin_addr) <= 0) {
         printf("\nInvalid address.\n");
@@ -32,21 +30,31 @@ int main(int argc, char const *argv[])
         return -1;
     }
 
-    printf("\nDigite a mensagem que deseja enviar\n\t");
-    fgets(msg, 200, stdin);
-    len = strlen(msg);
-    msg[len - 1] = '\0';
-    len++;
 
-    if(strcmp(msg, "quit") == 0) {
+    int n;
+    FILE *log = fopen("log.txt", "w");
+
+    if(log == NULL) {
+        printf("Error! Could not open file\n");
         return -1;
     }
 
-    send(sock, msg, len, 0);
-    valread = read(sock, buffer, 1024);
-    
-    printf("Mensagem recebida\n");
-    printf("\t%s\n", buffer);
+    *msg = "packet";
+    clock_t t;
+
+    for(n = 0; n < 20; n++) {
+        t = clock();
+        send(sock, msg, strlen(msg), 0);
+        valread = read(sock, buffer, 1024);
+        t = clock() - t;
+        double timeTaken = ((double)t)/(CLOCKS_PER_SEC / 1000);
+        fprintf(log, "Resposta de %s: bytes=%d tempo=%.2fms\n", argv[1], sizeof (msg),timeTaken);
+        printf("Resposta de %s: bytes=%d tempo=%.2fms\n", argv[1], sizeof (msg),timeTaken);
+
+        usleep(500000);
+    }
+
+    fclose(log);
   
     // closing the connected socket
     close(client_fd);

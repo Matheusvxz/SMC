@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 19 07:31:41 2022
+# Make data base, printed on Thu Aug 25 19:27:14 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ GOPATH = /home/matheus/golib
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-bc183b1e-67f7-4d42-ba53-8d518de94502.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-d28bcf43-425a-43cf-abfd-33aa33444248.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -69,7 +69,7 @@ PWD = /home/matheus/documents/faculdade/SMC
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/154_interop
+WSL_INTEROP = /run/WSL/156_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -151,11 +151,9 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu-20.04
 # environment
-MOTD_SHOWN = update-motd
-# environment
 NVM_RC_VERSION = 
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=4/93=4%
+# Load=70/1024=7%, Rehash=0, Collisions=4/92=4%
 
 # Pattern-specific Variable Values
 
@@ -221,6 +219,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Fri Aug 19 07:31:41 2022
+# Finished Make data base on Thu Aug 25 19:27:14 2022
 
  
