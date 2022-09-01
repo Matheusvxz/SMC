@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
@@ -19,7 +20,7 @@ int main(int argc, char const *argv[])
     
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = inet_addr(argv[1]);
-    serv_addr.sin_port = htons(28390);
+    serv_addr.sin_port = htons(atoi(argv[2]));
 
     if((client_fd = connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr)))) {
         printf("\nInvalid address.\n");
@@ -34,17 +35,17 @@ int main(int argc, char const *argv[])
         return -1;
     }
 
-    sprintf(msg,"packet");
-    clock_t t;
+    sprintf(msg, "packet");
+    struct timeval st, et;
 
     for(n = 0; n < 20; n++) {
-        t = clock();
+        gettimeofday(&st,NULL);
         send(sock, msg, sizeof(msg), 0);
         valread = read(sock, buffer, 1024);
-        t = clock() - t;
-        double timeTaken = ((double)t)/(CLOCKS_PER_SEC / 1000);
-        fprintf(log, "Resposta de %s: tempo=%.2fms\n", argv[1], timeTaken);
-        printf("Resposta de %s: tempo=%.2fms\n", argv[1], timeTaken);
+        gettimeofday(&et,NULL);
+        float elapsed = ((et.tv_sec - st.tv_sec) * 1000000) + (et.tv_usec - st.tv_usec);
+        fprintf(log, "Resposta de %s: tempo=%.2fms\n", argv[1], elapsed / (float)1000);
+        printf("Resposta de %s: tempo=%.2fms\n", argv[1], elapsed / (float)1000);
 
         usleep(500000);
     }

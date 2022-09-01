@@ -1,20 +1,20 @@
-Resposta de 143.244.157.206: bytes=200 tempo=0.28ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.12ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.15ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.09ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.17ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.10ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.20ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.12ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.10ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.21ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.12ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.12ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.26ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.09ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.12ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.13ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.36ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.10ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.20ms
-Resposta de 143.244.157.206: bytes=200 tempo=0.17ms
+Resposta de 143.244.157.206: tempo=160.05ms
+Resposta de 143.244.157.206: tempo=215.24ms
+Resposta de 143.244.157.206: tempo=127.20ms
+Resposta de 143.244.157.206: tempo=127.77ms
+Resposta de 143.244.157.206: tempo=134.61ms
+Resposta de 143.244.157.206: tempo=125.08ms
+Resposta de 143.244.157.206: tempo=128.89ms
+Resposta de 143.244.157.206: tempo=127.23ms
+Resposta de 143.244.157.206: tempo=125.58ms
+Resposta de 143.244.157.206: tempo=124.04ms
+Resposta de 143.244.157.206: tempo=129.86ms
+Resposta de 143.244.157.206: tempo=197.17ms
+Resposta de 143.244.157.206: tempo=215.89ms
+Resposta de 143.244.157.206: tempo=127.60ms
+Resposta de 143.244.157.206: tempo=128.43ms
+Resposta de 143.244.157.206: tempo=153.05ms
+Resposta de 143.244.157.206: tempo=126.67ms
+Resposta de 143.244.157.206: tempo=127.63ms
+Resposta de 143.244.157.206: tempo=123.02ms
+Resposta de 143.244.157.206: tempo=125.87ms

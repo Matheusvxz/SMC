@@ -1,20 +1,20 @@
-Resposta de 127.0.0.1: bytes=200 tempo=0.06ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.23ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.34ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.19ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.28ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.28ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.13ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.28ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.17ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.18ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.28ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.28ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.21ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.32ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.28ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.21ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.20ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.27ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.26ms
-Resposta de 127.0.0.1: bytes=200 tempo=0.25ms
+Resposta de 127.0.0.1: tempo=0.07ms
+Resposta de 127.0.0.1: tempo=0.41ms
+Resposta de 127.0.0.1: tempo=0.21ms
+Resposta de 127.0.0.1: tempo=0.14ms
+Resposta de 127.0.0.1: tempo=0.14ms
+Resposta de 127.0.0.1: tempo=0.12ms
+Resposta de 127.0.0.1: tempo=0.08ms
+Resposta de 127.0.0.1: tempo=0.13ms
+Resposta de 127.0.0.1: tempo=0.14ms
+Resposta de 127.0.0.1: tempo=0.13ms
+Resposta de 127.0.0.1: tempo=0.06ms
+Resposta de 127.0.0.1: tempo=0.13ms
+Resposta de 127.0.0.1: tempo=0.15ms
+Resposta de 127.0.0.1: tempo=0.15ms
+Resposta de 127.0.0.1: tempo=0.08ms
+Resposta de 127.0.0.1: tempo=0.08ms
+Resposta de 127.0.0.1: tempo=0.12ms
+Resposta de 127.0.0.1: tempo=0.15ms
+Resposta de 127.0.0.1: tempo=0.07ms
+Resposta de 127.0.0.1: tempo=0.12ms
